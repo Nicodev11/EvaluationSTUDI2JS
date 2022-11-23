@@ -10,17 +10,68 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
     <title>Jeu - Evaluation STUDI</title>
   </head>
   <body>
     <main class="container-fluid">
-      <div class="row shadow mb-5 bg-body rounded">
-        <div class="col left-col-item  ">
-          <div class="container-item"></div>
+      <div class="row shadow mb-5 bg-body rounded position-relative">
+        <div
+          class="new-game position-absolute d-flex justify-content-center text-center mb-5"
+        >
+          <i class="bi bi-plus-circle"></i>
+          <p>NEW GAME</p>
         </div>
-        <div class="col col-right right-col-item ">
-          <div class="container-item"></div>
+        <div class="col-6 col-left left-col-item">
+          <div class="container-item">
+            <div class="container-player player player1 text-center">
+              <p>PLAYER 1</p>
+              <span></span>
+            </div>
+            <div class="score score-player1 text-center">
+              <p>35</p>
+            </div>
+          </div>
+          <div class="current">
+            <p>CURRENT</p>
+            <span>0</span>
+          </div>
+        </div>
+        <div class="col-6 col-right right-col-item">
+          <div class="container-item">
+            <div class="container-player player player2 text-center">
+              <p>PLAYER 2</p>
+              <span></span>
+            </div>
+            <div class="score score-player2 text-center">
+              <p>50</p>
+            </div>
+            <div class="current">
+              <p>CURRENT</p>
+              <span>0</span>
+            </div>
+          </div>
+        </div>
+        <div class="game-choice position-absolute d-grid justify-content-center ">
+          <div class="roll-dice d-flex">
+            <i class="bi bi-arrow-repeat"></i>
+            <p>ROLL DICE</p>
+          </div>
+          <div class="hold d-flex mt-2">
+            <i class="bi bi-box-arrow-down"></i>
+            <p>HOLD</p>
+          </div>
         </div>
       </div>
     </main>
