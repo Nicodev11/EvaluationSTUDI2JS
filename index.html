@@ -21,7 +21,10 @@
       href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
     <title>Jeu - Evaluation STUDI</title>
   </head>
   <body>
@@ -35,7 +38,9 @@
         </div>
         <div class="col-6 col-left left-col-item">
           <div class="container-item">
-            <div class="container-player player player1 text-center">
+            <div
+              class="container-player player player1 d-flex justify-content-center player1 text-center"
+            >
               <p>PLAYER 1</p>
               <span></span>
             </div>
@@ -43,42 +48,53 @@
               <p>00</p>
             </div>
           </div>
-          <div class="current">
+          <div class="current current-player1">
             <p>CURRENT</p>
             <span>0</span>
           </div>
         </div>
         <div class="col-6 col-right right-col-item">
           <div class="container-item">
-            <div class="container-player player player2 text-center">
+            <div
+              class="container-player player player2 d-flex justify-content-center text-center"
+            >
               <p>PLAYER 2</p>
               <span></span>
             </div>
             <div class="score score-player2 text-center">
               <p>00</p>
             </div>
-            <div class="current">
+            <div class="current current-player2">
               <p>CURRENT</p>
               <span>0</span>
             </div>
           </div>
         </div>
         <div class="game-choice position-absolute">
-          <div class="roll-dice d-flex justify-content-center">
+          <div
+            class="roll-dice-player1 roll-dice d-flex justify-content-center"
+          >
             <i class="bi bi-arrow-repeat"></i>
             <p>ROLL DICE</p>
           </div>
-          <div class="hold d-flex justify-content-center mt-2">
+          <div
+            class="roll-dice-player2 roll-dice d-flex justify-content-center"
+          >
+            <i class="bi bi-arrow-repeat"></i>
+            <p>ROLL DICE</p>
+          </div>
+          <div class="hold-player1 hold d-flex justify-content-center mt-2">
+            <i class="bi bi-box-arrow-down"></i>
+            <p>HOLD</p>
+          </div>
+          <div class="hold-player2 hold d-flex justify-content-center mt-2">
             <i class="bi bi-box-arrow-down"></i>
             <p>HOLD</p>
           </div>
         </div>
-        <img src="./img/dice5.png" alt="dice" id="dice">
-
+        <img src="./img/dice5.png" alt="dice" id="dice" />
       </div>
-      
     </main>
-    
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

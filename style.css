@@ -75,7 +75,20 @@ body {
 
 .roll-dice:hover {
   cursor: pointer;
-
+}
+.hold-player2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+}
+.roll-dice-player2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  visibility: hidden;
 }
 .hold:hover {
   cursor: pointer;
@@ -89,4 +102,16 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
+}
+.player > span {
+  width: 25px;
+  height: 25px;
+  background: red;
+  border-radius: 50px;
+  margin: auto 0;
+  visibility: hidden;
+}
+
+.player1 > span {
+  visibility: visible;
 }
