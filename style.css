@@ -90,7 +90,7 @@ body {
   top: 0;
   visibility: hidden;
 }
-.hold:hover {
+.hold:hover, .new-game:hover {
   cursor: pointer;
 }
 
@@ -114,4 +114,7 @@ body {
 
 .player1 > span {
   visibility: visible;
+}
+.btn-rules {
+  width: 200px;
 }

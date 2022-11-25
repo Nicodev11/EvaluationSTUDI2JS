@@ -28,7 +28,9 @@
     <title>Jeu - Evaluation STUDI</title>
   </head>
   <body>
-    <main class="container-fluid">
+    
+    
+    <main class="container-fluid"> 
       <div class="row shadow mb-5 bg-body rounded position-relative">
         <div
           class="new-game position-absolute d-flex justify-content-center text-center mb-5"
@@ -93,9 +95,32 @@
           </div>
         </div>
         <img src="./img/dice5.png" alt="dice" id="dice" />
+        <button type="button" class="btn btn-rules btn-primary position-absolute bottom-0 start-50 translate-middle-x mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Comment jouer ?
+        </button>
       </div>
     </main>
-
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Règles du jeu</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Chaque joueur possède un score temporaire (Current) et un score global.</p>
+            <p>À chaque tour, le joueur peut lancer un dé autant de fois qu'il le souhaite.</p>
+            <p>Lors de son tour, le joueur peut décider à tout moment de:</p>
+             <li>Cliquer sur l’option “Hold”, qui permet d’enregistrer les points du current vers le GLOBAL et de donner la main à l’autre joueur.</li>
+             <li>Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour.</li><br>
+            <p>Le premier joueur qui atteint les 100 points sur global gagne le jeu.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

@@ -1,3 +1,4 @@
+const newGame = document.querySelector(".new-game")
 const holdPlayer1 = document.querySelector(".hold-player1");
 const holdPlayer2 = document.querySelector(".hold-player2");
 const rollDicePlayer1 = document.querySelector(".roll-dice-player1");
@@ -41,9 +42,21 @@ function resultScoreGlobalPlayer2() {
   }
   return total;
 }
+function finishPlayer1() {
+  if (countScorePlayer1 >= 100) {
+    alert('PLayer 1 à gagné la partie')
+  }
+}
+
+function finishPlayer2() {
+  if (countScorePlayer2 >= 100) {
+    alert('Player 2 à gagné la partie')
+  }
+}
+
 
 rollDicePlayer1.addEventListener("click", (e) => {
-  let valueDice = Math.floor(Math.random() * 6) + 1;
+  let valueDice = Math.floor(Math.random() * 6) +1;
   document
     .getElementById("dice")
     .setAttribute("src", "./img/dice" + valueDice + ".png");
@@ -76,6 +89,7 @@ holdPlayer1.addEventListener('click', (e) => {
   countCurrentPlayer1 = []
   redPointPlayer1.style.visibility = 'hidden'
   redPointPlayer2.style.visibility = 'visible'
+  finishPlayer1()
 })
 
 rollDicePlayer2.addEventListener("click", (e) => {
@@ -115,6 +129,18 @@ holdPlayer2.addEventListener('click', (e) => {
   countCurrentPlayer2 = []
   redPointPlayer2.style.visibility = 'hidden'
   redPointPlayer1.style.visibility = 'visible'
+  finishPlayer2()
 })
 
+newGame.addEventListener('click', (e) => {
+  window.location.reload()
+})
 
+// -------------MODAL BOOTSTRAP −−−−−−−−−−−−−−//
+
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
